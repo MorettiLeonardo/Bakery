@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100%;
+}
+
+header,
+footer {
+    background-color: #ffc42f;
+    padding: 16px 0px;
+    color: #fff;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+.container h1 {
+    font-style: italic;
+    color: #fff;
+}
+
+.container a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container ul li {
+    display: inline;
+    list-style: none;
+    margin-left: 16px;
+}
+
+.container ul li a:hover {
+    transition: 0.4s;
+    color: #fff2d4;
+}
+
+#loja-image {
+    max-width: 48%;
+}
+
+.about-store {
+    margin-top: 16px;
+    display: flex;
+}
+
+.bio-about-store h2,
+.container > h2 {
+    color: #ffc42f;
+    border-bottom: 2px solid #ffc42f;
+    padding-bottom: 16px;
+    margin-bottom: 4%;
+    font-style: italic;
+}
+
+.bio-about-store {
+    margin-left: 16px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 24.3%);
+    gap: 1%;
+    margin-bottom: 5%;
+}
+
+.card-product {
+    background-color: #fff2d4;
+    padding: 8px;
+}
+
+.card-product img,
+.card-product button {
+    width: 100%;
+}
+
+.card-product button {
+    border: none;
+    background-color: #ffc42f;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.card-product button:hover {
+    background-color: #b5850b;
+}
+
+.card-product h3{
+    font-size: 1.2em;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media screen and (max-width: 878px) {
+    .container {
+        padding: 16px;
+    }
+    #loja-image {
+        min-width: 100%;
+        margin-bottom: 16px;
+    }
+    .about-store {
+        display: flex;
+        flex-direction: column;
+    }
+    .bio-about-store {
+        margin-left: 0;
+    }
+    img{
+        width: 100%;
+    }
+    .card-product h3 {
+        font-size: 1.1em;
+    }
+    .products {
+        grid-template-columns: repeat(2, 50%);
+        gap: 1%;
+    }    
+}
+
+@media screen and (max-width: 666px) {
+    header {
+        text-align: center;
+    }
+    
+    .products {
+        display: block;
+    }
+    .card-product {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    footer .container{
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+    }
+}
